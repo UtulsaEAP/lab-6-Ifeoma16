@@ -9,9 +9,9 @@ def filter_and_print_range(input_list, min_val, max_val):
     result = []
 
     for num in input_list:
-        if int(num) >= min_val and int(num) <= max_val:
+        if int(num) >= int(min_val) and int(num) <= int(max_val):
             result.append(num)
-    print(','.join(result), end = ',')
+    print(','.join(map(str, result)), end=',')
 
 
 if __name__ == '__main__':
