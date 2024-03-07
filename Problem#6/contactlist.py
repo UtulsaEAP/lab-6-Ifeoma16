@@ -2,11 +2,12 @@
 Name: Ifeoma Ogwu
 Lab Time: Thursday, 2pm - 3:15pm
 '''
+import re
 
 def process_user_contacts(user_input):
     user_contacts = {}
 
-    tokens = user_input.split() or user_input.split(',')
+    tokens = [item.strip() for item in re.split(r'[,\s]+', user_input) if item]
 
     # Put word pairs into a dictionary
     for i in range(0, len(tokens), 2):
